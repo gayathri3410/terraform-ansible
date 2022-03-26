@@ -8,5 +8,5 @@ ansible_subnet_name        = "ansiblesubnet"
 ansible_subnet_address     = ["10.1.1.0/24"]
 ansible_linuxvm_size       = "Standard_D2s_v3"
 ansible_linuxvm_admin_user = "azureuser"
-ansible_password           = "azureuser15"
+ansible_password           = "Azureuser15"
 ansible_computer_name      = "hostname"
