@@ -1,7 +1,7 @@
 business_divsion           = "Ansible"
 environment                = "dev"
 resource_group_name        = "rg"
-resource_group_location    = "East US"
+resource_group_location    = "South India"
 vnet_name                  = "vnet"
 vnet_address_space         = ["10.1.0.0/16"]
 ansible_subnet_name        = "ansiblesubnet"
