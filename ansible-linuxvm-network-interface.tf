@@ -1,5 +1,7 @@
 # Resource-2: Create Network Interface
 resource "azurerm_network_interface" "ansible_linuxvm_nic" {
+  # count = 2
+  # name  = "ansible-linuxvm-nic${count.index}"
   name                = "${local.name}-ansible-linuxvm-nic"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -8,7 +10,9 @@ resource "azurerm_network_interface" "ansible_linuxvm_nic" {
     name                          = "ansible-linuxvm-ip-1"
     subnet_id                     = azurerm_subnet.ansiblesubnet.id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.ansible_linuxvm_publicip.id
+    # public_ip_address_id          = element(azurerm_public_ip.ansible_linuxvm_publicip.*.id, count.index)
+
+    public_ip_address_id = azurerm_public_ip.ansible_linuxvm_publicip.id
   }
 }
 
